@@ -1,0 +1,103 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+    color: white;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+/* Stanford Images Section */
+#stanford-images {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: black;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Individual Stanford Image Styling */
+/* Stanford Images Section */
+#stanford-images img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    transform: scale(1); /* Start at normal size */
+    transition: opacity 1.5s ease-in-out, transform 10s ease-in-out; /* Smooth fade and zoom effect */
+    background-color: black;
+}
+
+/* Add an active class for the current image to enhance the effect */
+#stanford-images img.active {
+    opacity: 1;
+    transform: scale(1.1); /* Gradually zoom to 110% over 10 seconds */
+}
+
+
+/* Text Message Section */
+#text-message {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    opacity: 1;
+    z-index: 2;
+    transition: opacity 1.5s ease-in-out;
+    position: relative;
+    margin: 0;
+}
+
+/* Play Button */
+#play-button {
+    position: absolute;
+    bottom: 20%;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient background */
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold; /* Make the font stand out */
+    padding: 15px 30px; /* Add some padding for a larger button */
+    border: none; /* Remove border */
+    border-radius: 30px; /* Rounded corners for a modern look */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Add a soft shadow for depth */
+    transition: all 0.3s ease; /* Smooth transitions for hover effects */
+    z-index: 3;
+}
+
+/* Hover Effect for the Button */
+#play-button:hover {
+    background: linear-gradient(135deg, #feb47b, #ff7e5f); /* Reverse gradient on hover */
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.3); /* Intensify the shadow */
+    transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+/* Active (Clicked) Effect */
+#play-button:active {
+    transform: scale(0.98); /* Slightly shrink the button for feedback */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Soften the shadow */
+}
+
+/* Fade-Out Class */
+.fade-out {
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out; /* Smooth fade-out effect */
+}
+
+/* Audio Container */
+.audio-container {
+    display: none;
+}
+
