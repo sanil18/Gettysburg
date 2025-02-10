@@ -1,8 +1,8 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #000000; /* Dark background color */
-    color: #f0f8ff; /* Light text color */
+    background-color: #000000; 
+    color: #f0f8ff; 
     font-family: 'Georgia', serif;
     display: flex;
     align-items: center;
@@ -14,7 +14,7 @@ body {
   #story-container {
     max-width: 800px;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.8); /* Darker background for story container */
+    background-color: rgba(0, 0, 0, 0.8); 
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
